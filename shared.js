@@ -448,7 +448,6 @@ function openEnquiry(){
 function closeEnquiry(){ document.getElementById('modal-enquiry').classList.remove('open'); }
 
 function handleEnquirySubmit(e){
-  e.preventDefault();
   // NETLIFY: add name="enquiry" data-netlify="true" to #eq-form, then remove e.preventDefault()
   // FORMSPREE: add action="https://formspree.io/f/YOUR_ID" method="POST" to #eq-form, then remove e.preventDefault()
   const btn=document.getElementById('eq-send');
@@ -458,7 +457,6 @@ function handleEnquirySubmit(e){
 }
 
 function handleContactSubmit(e){
-  e.preventDefault();
   // NETLIFY: add name="contact" data-netlify="true" to #contact-form, then remove e.preventDefault()
   // FORMSPREE: add action="https://formspree.io/f/YOUR_ID" method="POST" to #contact-form, then remove e.preventDefault()
   const btn=document.getElementById('cf-send');

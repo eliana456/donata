@@ -104,10 +104,7 @@
       </div>
       <div class="contact-form">
         <div class="contact-form-title" id="ct-form-title">Siųsti žinutę</div>
-        <!--
-          NETLIFY: add name="contact" data-netlify="true" to form, remove e.preventDefault() in handleContactSubmit
-          FORMSPREE: add action="https://formspree.io/f/YOUR_ID" method="POST" to form, remove e.preventDefault()
-        -->
+        <form id="contact-form" action="https://formspree.io/f/xnjrplwo" method="POST" onsubmit="handleContactSubmit(event)">
         <form id="contact-form" onsubmit="handleContactSubmit(event)">
           <input  class="cf-input"    name="name"    id="cf-name"  type="text"  required style="margin-bottom:12px;" placeholder="Jūsų vardas">
           <input  class="cf-input"    name="email"   id="cf-email" type="email" required style="margin-bottom:12px;" placeholder="El. pašto adresas">

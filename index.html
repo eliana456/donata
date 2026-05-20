@@ -158,10 +158,7 @@
         </button>
         <div class="eq-heading" id="eq-heading"></div>
         <div class="eq-subject" id="eq-subject"></div>
-        <!--
-          NETLIFY: add name="enquiry" data-netlify="true" to form tag, remove e.preventDefault() in handleEnquirySubmit
-          FORMSPREE: add action="https://formspree.io/f/YOUR_ID" method="POST" to form tag, remove e.preventDefault()
-        -->
+        <form id="eq-form" action="https://formspree.io/f/xnjrplwo" method="POST" onsubmit="handleEnquirySubmit(event)">
         <form id="eq-form" onsubmit="handleEnquirySubmit(event)">
           <input type="hidden" name="subject" id="eq-hidden-subject">
           <input  class="eq-input"    name="name"    id="eq-name"  type="text"  required style="margin-bottom:10px;">
