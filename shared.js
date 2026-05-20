@@ -51,7 +51,7 @@ const paintings = [
 const strings = {
   lt: {
     navWorks:'Darbai', navAbout:'Apie', navContact:'Kontaktai',
-    eyebrow:'tapytoja · Roterdamas', heroTitle:'Atrinkti darbai, 2022–2024',
+    eyebrow:'tapytoja · Vilnius', heroTitle:'Atrinkti darbai, 2022–2024',
     filterLabel:'filtrai', fpTitle:'Filtruoti darbus', fpClear:'išvalyti filtrus',
     groups:[
       {key:'medium', label:'technika',     opts:[{k:'oil',l:'aliejus'},{k:'acrylic',l:'akrilas'},{k:'watercolour',l:'akvarelė'}]},
@@ -66,14 +66,14 @@ const strings = {
     eqBack:'grįžti', eqPrefix:'Teiravimasis dėl paveikslo',
     cfName:'Jūsų vardas', cfEmail:'El. pašto adresas', cfMsg:'Jūsų žinutė...', cfSend:'Siųsti žinutę',
     noResults:'Nėra atitinkančių darbų.',
-    footer:'© 2024 Ana Lima', footerRights:'Visos teisės saugomos',
+    footer:'© 2024 Donata Andriuškevičienė', footerRights:'Visos teisės saugomos',
     dblHint:'dukart spustelėkite norėdami sužinoti daugiau',
     worksLabel:(n)=>`${n} darb${n===1?'as':n<10?'ai':'ų'}`,
     sizeMap:{small:'Mažas',medium:'Vidutinis',large:'Didelis'},
   },
   en: {
     navWorks:'Works', navAbout:'About', navContact:'Contact',
-    eyebrow:'painter · Rotterdam', heroTitle:'Selected works, 2022–2024',
+    eyebrow:'painter · Vilnius', heroTitle:'Selected works, 2022–2024',
     filterLabel:'filter', fpTitle:'Filter works', fpClear:'clear all filters',
     groups:[
       {key:'medium', label:'medium',       opts:[{k:'oil',l:'oil'},{k:'acrylic',l:'acrylic'},{k:'watercolour',l:'watercolour'}]},
@@ -88,7 +88,7 @@ const strings = {
     eqBack:'back', eqPrefix:'Enquiry about',
     cfName:'Your name', cfEmail:'Email address', cfMsg:'Your message...', cfSend:'Send message',
     noResults:'No works match this filter.',
-    footer:'© 2024 Ana Lima', footerRights:'All rights reserved',
+    footer:'© 2024 Donata Andriuškevičienė', footerRights:'All rights reserved',
     dblHint:'double-click to open',
     worksLabel:(n)=>`${n} work${n!==1?'s':''}`,
     sizeMap:{small:'Small',medium:'Medium',large:'Large'},

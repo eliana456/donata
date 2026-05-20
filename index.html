@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- ── PAGE-SPECIFIC SEO ── -->
-<title>Ana Lima — Tapytoja | Originalūs paveikslai</title>
-<meta name="description" content="Ana Lima — tapytoja iš Roterdamo. Originalūs aliejaus, akrilų ir akvarelės paveikslai. Prieinami įsigyti, pristatoma tarptautiniu mastu.">
+<title>Donata Andriuškevičienė — Tapytoja | Originalūs paveikslai</title>
+<meta name="description" content="Donata Andriuškevičienė — tapytoja iš Vilniaus. Originalūs aliejaus, akrilų ir akvarelės paveikslai. Prieinami įsigyti, pristatoma tarptautiniu mastu.">
 <link rel="canonical" href="https://analima.art/">
 <!-- hreflang: tells Google which language version this is -->
 <link rel="alternate" hreflang="lt" href="https://analima.art/">
@@ -16,15 +16,15 @@
 <!-- Open Graph -->
 <meta property="og:type"        content="website">
 <meta property="og:url"         content="https://analima.art/">
-<meta property="og:title"       content="Ana Lima — Tapytoja">
-<meta property="og:description" content="Originalūs paveikslai — aliejus, akrilas, akvarelė. Roterdamas.">
+<meta property="og:title"       content="Donata Andriuškevičienė — Tapytoja">
+<meta property="og:description" content="Originalūs paveikslai — aliejus, akrilas, akvarelė. Vilnius.">
 <meta property="og:image"       content="https://analima.art/images/og-cover.jpg">
 <!-- ✏️ Replace og-cover.jpg with one of your painting images (1200×630px ideal) -->
 
 <!-- Twitter Card -->
 <meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:title"       content="Ana Lima — Tapytoja">
-<meta name="twitter:description" content="Originalūs paveikslai — aliejus, akrilas, akvarelė. Roterdamas.">
+<meta name="twitter:title"       content="Donata Andriuškevičienė — Tapytoja">
+<meta name="twitter:description" content="Originalūs paveikslai — aliejus, akrilas, akvarelė. Vilnius.">
 <meta name="twitter:image"       content="https://analima.art/images/og-cover.jpg">
 
 <!-- ── STRUCTURED DATA — Person + VisualArtist ── -->
@@ -32,7 +32,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Ana Lima",
+  "name": "Donata Andriuškevičienė",
   "jobTitle": "Painter",
   "url": "https://analima.art",
   "sameAs": [
@@ -40,7 +40,7 @@
   ],
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Rotterdam",
+    "addressLocality": "Vilnius",
     "addressCountry": "NL"
   },
   "knowsAbout": ["Oil painting", "Acrylic painting", "Watercolour", "Contemporary art"],
@@ -65,7 +65,7 @@
 <body>
 
 <header class="header">
-  <a class="header-name" href="index.html">Ana Lima</a>
+  <a class="header-name" href="index.html">Donata Andriuškevičienė</a>
   <div class="header-right">
     <nav class="nav">
       <a id="nav-works"   href="index.html"   class="active">Darbai</a>
@@ -91,7 +91,7 @@
 
 <main>
   <section class="hero">
-    <div class="hero-eyebrow" id="hero-eyebrow">tapytoja · Roterdamas</div>
+    <div class="hero-eyebrow" id="hero-eyebrow">tapytoja · Vilnius</div>
     <h1 class="hero-title" id="hero-title">Atrinkti darbai, 2022–2024</h1>
   </section>
   <div class="toolbar">
@@ -109,8 +109,8 @@
 </main>
 
 <footer class="footer">
-  <a class="footer-name" href="index.html">Ana Lima</a>
-  <span class="footer-copy" id="footer-copy">© 2024 Ana Lima · <span>Visos teisės saugomos</span></span>
+  <a class="footer-name" href="index.html">Donata Andriuškevičienė</a>
+  <span class="footer-copy" id="footer-copy">© 2024 Donata Andriuškevičienė · <span>Visos teisės saugomos</span></span>
 </footer>
 
 <!-- Filter panel -->
@@ -183,11 +183,11 @@ function onLangChange(l){
   document.getElementById('hero-title').textContent   = st.heroTitle;
   // update page title and meta description for the active language
   document.title = l==='lt'
-    ? 'Ana Lima — Tapytoja | Originalūs paveikslai'
-    : 'Ana Lima — Painter | Original paintings';
+    ? 'Donata Andriuškevičienė — Tapytoja | Originalūs paveikslai'
+    : 'Donata Andriuškevičienė — Painter | Original paintings';
   document.querySelector('meta[name="description"]').content = l==='lt'
-    ? 'Ana Lima — tapytoja iš Roterdamo. Originalūs aliejaus, akrilų ir akvarelės paveikslai.'
-    : 'Ana Lima — painter based in Rotterdam. Original oil, acrylic and watercolour paintings for sale.';
+    ? 'Donata Andriuškevičienė — tapytoja iš Vilniaus. Originalūs aliejaus, akrilų ir akvarelės paveikslai.'
+    : 'Donata Andriuškevičienė — painter based in Vilnius. Original oil, acrylic and watercolour paintings for sale.';
   renderGallery();
   renderFilterPanel();
 }
