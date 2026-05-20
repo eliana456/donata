@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://analima.art/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <!-- hreflang annotations — same page serves both languages -->
+    <xhtml:link rel="alternate" hreflang="lt" href="https://analima.art/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://analima.art/"/>
+  </url>
+
+  <url>
+    <loc>https://analima.art/about.html</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://analima.art/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://analima.art/about.html"/>
+  </url>
+
+  <url>
+    <loc>https://analima.art/contact.html</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://analima.art/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://analima.art/contact.html"/>
+  </url>
+
+</urlset>

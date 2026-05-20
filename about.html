@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apie — Ana Lima, tapytoja Roterdame</title>
+<meta name="description" content="Ana Lima — tapytoja, gyvenanti Roterdame. Studijavo Vilniaus dailės akademijoje. Aliejus, akrilas, akvarelė. Priima užsakymus.">
+<link rel="canonical" href="https://analima.art/about.html">
+<link rel="alternate" hreflang="lt" href="https://analima.art/about.html">
+<link rel="alternate" hreflang="en" href="https://analima.art/about.html">
+<link rel="alternate" hreflang="x-default" href="https://analima.art/about.html">
+
+<meta property="og:type"        content="profile">
+<meta property="og:url"         content="https://analima.art/about.html">
+<meta property="og:title"       content="Ana Lima — About the artist">
+<meta property="og:description" content="Painter based in Rotterdam. Oil, acrylic, watercolour. Commissions welcome.">
+<meta property="og:image"       content="https://analima.art/images/portrait.jpg">
+
+<!-- Structured data — VisualArtist with richer detail -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ana Lima",
+  "jobTitle": "Painter",
+  "description": "Contemporary painter based in Rotterdam, working in oil, acrylic and watercolour. Originally from Vilnius, Lithuania.",
+  "url": "https://analima.art",
+  "image": "https://analima.art/images/portrait.jpg",
+  "birthPlace": {
+    "@type": "Place",
+    "name": "Vilnius, Lithuania"
+  },
+  "homeLocation": {
+    "@type": "Place",
+    "name": "Rotterdam, Netherlands"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Vilnius Academy of Arts"
+  },
+  "sameAs": [
+    "https://www.instagram.com/ana.lima.art"
+  ]
+}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date()); gtag('config','G-XXXXXXXXXX');
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a class="header-name" href="index.html">Ana Lima</a>
+  <div class="header-right">
+    <nav class="nav">
+      <a id="nav-works"   href="index.html">Darbai</a>
+      <a id="nav-about"   href="about.html"  class="active">Apie</a>
+      <a id="nav-contact" href="contact.html">Kontaktai</a>
+    </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-lt" onclick="setLang('lt')">LT</button>
+      <div class="lang-sep"></div>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a id="mnav-works"   href="index.html"  onclick="closeMobileNav()">Darbai</a>
+  <a id="mnav-about"   href="about.html"  class="active" onclick="closeMobileNav()">Apie</a>
+  <a id="mnav-contact" href="contact.html" onclick="closeMobileNav()">Kontaktai</a>
+</nav>
+
+<main>
+  <div class="about-page">
+    <div class="about-eyebrow" id="about-eyebrow">tapytoja · Roterdamas</div>
+    <h1 class="about-title" id="about-title">Apie menininkę</h1>
+    <div class="about-grid">
+      <div class="about-portrait">
+        <!-- ✏️ Replace with: <img src="images/portrait.jpg" alt="Ana Lima, painter"> -->
+        <div class="about-portrait-placeholder"></div>
+      </div>
+      <div class="about-text">
+        <div class="about-bio" id="about-bio"></div>
+        <div class="about-divider"></div>
+        <div class="about-details">
+          <div class="about-detail-row">
+            <span class="about-detail-label" id="abl-born"></span>
+            <span class="about-detail-val">Vilnius, Lietuva</span>
+          </div>
+          <div class="about-detail-row">
+            <span class="about-detail-label" id="abl-based"></span>
+            <span class="about-detail-val" id="abv-based">Roterdamas, Nyderlandai</span>
+          </div>
+          <div class="about-detail-row">
+            <span class="about-detail-label" id="abl-edu"></span>
+            <span class="about-detail-val">Vilniaus dailės akademija</span>
+          </div>
+          <div class="about-detail-row">
+            <span class="about-detail-label" id="abl-med"></span>
+            <span class="about-detail-val" id="abv-med">Aliejus, akrilas, akvarelė</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <a class="footer-name" href="index.html">Ana Lima</a>
+  <span class="footer-copy" id="footer-copy">© 2024 Ana Lima · <span>Visos teisės saugomos</span></span>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+const aboutStrings = {
+  lt: {
+    eyebrow:'tapytoja · Roterdamas', title:'Apie menininkę',
+    bio:`<p>Ana Lima yra tapytoja, gyvenanti ir dirbanti Roterdame. Jos darbai atskleidžia ryškų spalvų pasaulį – ekspresyvius peizažus, figūras ir natūrmortus, kuriuose aliejus ir akrilas susilieja su intuityvia gestika.</p><p>Studijavo dailę Vilniaus dailės akademijoje, vėliau tęsė studijas Roterdame. Jos paveikslai eksponuoti galerijose Lietuvoje ir Nyderlanduose.</p><p>Priima užsakymus. Paveikslai pristatomi tarptautiniu mastu.</p>`,
+    born:'Gimė', based:'Gyvena', basedVal:'Roterdamas, Nyderlandai',
+    edu:'Išsilavinimas', med:'Technikos', medVal:'Aliejus, akrilas, akvarelė',
+  },
+  en: {
+    eyebrow:'painter · Rotterdam', title:'About the artist',
+    bio:`<p>Ana Lima is a painter living and working in Rotterdam. Her work explores a world of bold colour — expressive landscapes, figures and still lifes where oil and acrylic merge with intuitive mark-making.</p><p>She studied fine art at the Vilnius Academy of Arts before continuing her studies in Rotterdam. Her paintings have been exhibited in galleries in Lithuania and the Netherlands.</p><p>Commissions are welcome. Works ship internationally.</p>`,
+    born:'Born', based:'Based', basedVal:'Rotterdam, Netherlands',
+    edu:'Education', med:'Media', medVal:'Oil, acrylic, watercolour',
+  },
+};
+
+function onLangChange(l){
+  const st = aboutStrings[l];
+  document.getElementById('about-eyebrow').textContent = st.eyebrow;
+  document.getElementById('about-title').textContent   = st.title;
+  document.getElementById('about-bio').innerHTML       = st.bio;
+  document.getElementById('abl-born').textContent  = st.born;
+  document.getElementById('abl-based').textContent = st.based;
+  document.getElementById('abv-based').textContent = st.basedVal;
+  document.getElementById('abl-edu').textContent   = st.edu;
+  document.getElementById('abl-med').textContent   = st.med;
+  document.getElementById('abv-med').textContent   = st.medVal;
+  document.title = l==='lt'
+    ? 'Apie — Ana Lima, tapytoja Roterdame'
+    : 'About — Ana Lima, painter in Rotterdam';
+  document.querySelector('meta[name="description"]').content = l==='lt'
+    ? 'Ana Lima — tapytoja, gyvenanti Roterdame. Studijavo Vilniaus dailės akademijoje.'
+    : 'Ana Lima — painter based in Rotterdam. Studied at Vilnius Academy of Arts. Commissions welcome.';
+}
+
+initLang();
+</script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── PAGE-SPECIFIC SEO ── -->
+<title>Ana Lima — Tapytoja | Originalūs paveikslai</title>
+<meta name="description" content="Ana Lima — tapytoja iš Roterdamo. Originalūs aliejaus, akrilų ir akvarelės paveikslai. Prieinami įsigyti, pristatoma tarptautiniu mastu.">
+<link rel="canonical" href="https://analima.art/">
+<!-- hreflang: tells Google which language version this is -->
+<link rel="alternate" hreflang="lt" href="https://analima.art/">
+<link rel="alternate" hreflang="en" href="https://analima.art/">
+<link rel="alternate" hreflang="x-default" href="https://analima.art/">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://analima.art/">
+<meta property="og:title"       content="Ana Lima — Tapytoja">
+<meta property="og:description" content="Originalūs paveikslai — aliejus, akrilas, akvarelė. Roterdamas.">
+<meta property="og:image"       content="https://analima.art/images/og-cover.jpg">
+<!-- ✏️ Replace og-cover.jpg with one of your painting images (1200×630px ideal) -->
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Ana Lima — Tapytoja">
+<meta name="twitter:description" content="Originalūs paveikslai — aliejus, akrilas, akvarelė. Roterdamas.">
+<meta name="twitter:image"       content="https://analima.art/images/og-cover.jpg">
+
+<!-- ── STRUCTURED DATA — Person + VisualArtist ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ana Lima",
+  "jobTitle": "Painter",
+  "url": "https://analima.art",
+  "sameAs": [
+    "https://www.instagram.com/ana.lima.art"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rotterdam",
+    "addressCountry": "NL"
+  },
+  "knowsAbout": ["Oil painting", "Acrylic painting", "Watercolour", "Contemporary art"],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Visual Artist"
+  }
+}
+</script>
+
+<!-- Google Analytics — replace G-XXXXXXXXXX -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date()); gtag('config','G-XXXXXXXXXX');
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a class="header-name" href="index.html">Ana Lima</a>
+  <div class="header-right">
+    <nav class="nav">
+      <a id="nav-works"   href="index.html"   class="active">Darbai</a>
+      <a id="nav-about"   href="about.html">Apie</a>
+      <a id="nav-contact" href="contact.html">Kontaktai</a>
+    </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-lt" onclick="setLang('lt')">LT</button>
+      <div class="lang-sep"></div>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a id="mnav-works"   href="index.html"   class="active" onclick="closeMobileNav()">Darbai</a>
+  <a id="mnav-about"   href="about.html"              onclick="closeMobileNav()">Apie</a>
+  <a id="mnav-contact" href="contact.html"            onclick="closeMobileNav()">Kontaktai</a>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="hero-eyebrow" id="hero-eyebrow">tapytoja · Roterdamas</div>
+    <h1 class="hero-title" id="hero-title">Atrinkti darbai, 2022–2024</h1>
+  </section>
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <span class="work-count" id="work-count"></span>
+      <div class="active-tags" id="active-tags"></div>
+    </div>
+    <button class="filter-btn" id="filter-btn" onclick="openFilterPanel()">
+      <i class="ti ti-adjustments-horizontal" aria-hidden="true"></i>
+      <span id="filter-btn-label">filtrai</span>
+    </button>
+  </div>
+  <div class="gallery"    id="gallery"></div>
+  <div class="no-results" id="no-results"></div>
+</main>
+
+<footer class="footer">
+  <a class="footer-name" href="index.html">Ana Lima</a>
+  <span class="footer-copy" id="footer-copy">© 2024 Ana Lima · <span>Visos teisės saugomos</span></span>
+</footer>
+
+<!-- Filter panel -->
+<div class="fp-overlay" id="fp-overlay" onclick="closeFilterPanel()"></div>
+<div class="filter-panel" id="filter-panel">
+  <div class="fp-header">
+    <span class="fp-title" id="fp-title">Filtruoti darbus</span>
+    <button class="fp-close" onclick="closeFilterPanel()"><i class="ti ti-x" aria-hidden="true"></i></button>
+  </div>
+  <div class="fp-body"   id="fp-body"></div>
+  <div class="fp-footer"><button class="fp-clear" id="fp-clear" onclick="clearFilters()"></button></div>
+</div>
+
+<!-- Modal lightbox -->
+<div class="modal-overlay" id="modal" onclick="handleModalBgClick(event)">
+  <button class="modal-close-btn" onclick="closeLb()" aria-label="Close">
+    <i class="ti ti-x" aria-hidden="true"></i>
+  </button>
+  <div class="modal-dots-bar" id="modal-dots" onclick="event.stopPropagation()"></div>
+  <div class="modal-body" onclick="event.stopPropagation()">
+    <div class="modal-stage">
+      <button class="modal-side-arrow modal-side-left"  onclick="moveLb(-1)" aria-label="Previous">&#8249;</button>
+      <div id="modal-painting"></div>
+      <button class="modal-side-arrow modal-side-right" onclick="moveLb(1)"  aria-label="Next">&#8250;</button>
+    </div>
+    <div class="modal-info">
+      <div class="modal-info-inner">
+        <div class="modal-title" id="modal-title"></div>
+        <div><div class="modal-meta-label" id="mlbl-med"></div><div class="modal-meta-val" id="mval-med"></div></div>
+        <div><div class="modal-meta-label" id="mlbl-dim"></div><div class="modal-meta-val" id="mval-dim"></div></div>
+        <div><div class="modal-meta-label" id="mlbl-size"></div><div class="modal-meta-val" id="mval-size"></div></div>
+        <div><div class="modal-meta-label" id="mlbl-year"></div><div class="modal-meta-val" id="mval-year"></div></div>
+        <div class="modal-price-block">
+          <div id="modal-avail"></div>
+          <div class="modal-price" id="modal-price"></div>
+        </div>
+        <div class="modal-actions">
+          <button class="modal-btn modal-btn-primary" id="modal-btn1" onclick="openEnquiry()"></button>
+        </div>
+      </div>
+      <div class="modal-enquiry" id="modal-enquiry">
+        <button class="eq-back" onclick="closeEnquiry()">
+          <i class="ti ti-arrow-left" aria-hidden="true"></i>
+          <span id="eq-back-label"></span>
+        </button>
+        <div class="eq-heading" id="eq-heading"></div>
+        <div class="eq-subject" id="eq-subject"></div>
+        <!--
+          NETLIFY: add name="enquiry" data-netlify="true" to form tag, remove e.preventDefault() in handleEnquirySubmit
+          FORMSPREE: add action="https://formspree.io/f/YOUR_ID" method="POST" to form tag, remove e.preventDefault()
+        -->
+        <form id="eq-form" onsubmit="handleEnquirySubmit(event)">
+          <input type="hidden" name="subject" id="eq-hidden-subject">
+          <input  class="eq-input"    name="name"    id="eq-name"  type="text"  required style="margin-bottom:10px;">
+          <input  class="eq-input"    name="email"   id="eq-email" type="email" required style="margin-bottom:10px;">
+          <textarea class="eq-textarea" name="message" id="eq-msg" style="margin-bottom:10px;"></textarea>
+          <button type="submit" class="eq-send" id="eq-send"></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+<script>
+// page-specific lang change handler
+function onLangChange(l){
+  const st = strings[l];
+  document.getElementById('hero-eyebrow').textContent = st.eyebrow;
+  document.getElementById('hero-title').textContent   = st.heroTitle;
+  // update page title and meta description for the active language
+  document.title = l==='lt'
+    ? 'Ana Lima — Tapytoja | Originalūs paveikslai'
+    : 'Ana Lima — Painter | Original paintings';
+  document.querySelector('meta[name="description"]').content = l==='lt'
+    ? 'Ana Lima — tapytoja iš Roterdamo. Originalūs aliejaus, akrilų ir akvarelės paveikslai.'
+    : 'Ana Lima — painter based in Rotterdam. Original oil, acrylic and watercolour paintings for sale.';
+  renderGallery();
+  renderFilterPanel();
+}
+initLang();
+renderGallery();
+renderFilterPanel();
+</script>
+</body>
+</html>

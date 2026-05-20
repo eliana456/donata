@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kontaktai — Ana Lima, tapytoja</title>
+<meta name="description" content="Susisiekite su Ana Lima — tapytoja iš Roterdamo. Paveikslų užsakymai, klausimai dėl prieinamumo. Atsakymas per 48 valandas.">
+<link rel="canonical" href="https://analima.art/contact.html">
+<link rel="alternate" hreflang="lt" href="https://analima.art/contact.html">
+<link rel="alternate" hreflang="en" href="https://analima.art/contact.html">
+<link rel="alternate" hreflang="x-default" href="https://analima.art/contact.html">
+
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://analima.art/contact.html">
+<meta property="og:title"       content="Contact — Ana Lima">
+<meta property="og:description" content="Commission a painting or ask about availability. Based in Rotterdam, ships internationally.">
+<meta property="og:image"       content="https://analima.art/images/og-cover.jpg">
+
+<!-- Structured data — ContactPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Ana Lima",
+  "url": "https://analima.art/contact.html",
+  "description": "Contact page for painter Ana Lima. Commission original paintings or enquire about availability.",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Ana Lima",
+    "email": "ana@analima.art",
+    "url": "https://analima.art",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rotterdam",
+      "addressCountry": "NL"
+    }
+  }
+}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date()); gtag('config','G-XXXXXXXXXX');
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a class="header-name" href="index.html">Ana Lima</a>
+  <div class="header-right">
+    <nav class="nav">
+      <a id="nav-works"   href="index.html">Darbai</a>
+      <a id="nav-about"   href="about.html">Apie</a>
+      <a id="nav-contact" href="contact.html" class="active">Kontaktai</a>
+    </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-lt" onclick="setLang('lt')">LT</button>
+      <div class="lang-sep"></div>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a id="mnav-works"   href="index.html"   onclick="closeMobileNav()">Darbai</a>
+  <a id="mnav-about"   href="about.html"   onclick="closeMobileNav()">Apie</a>
+  <a id="mnav-contact" href="contact.html" class="active" onclick="closeMobileNav()">Kontaktai</a>
+</nav>
+
+<main>
+  <div class="contact-page">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="contact-eyebrow" id="ct-eyebrow">kontaktai</div>
+        <h1 class="contact-title" id="ct-title">Susisiekime</h1>
+        <div class="contact-body" id="ct-body">
+          Norite užsakyti paveikslą, teirautis dėl prieinamumo ar tiesiog pasisveikinti — rašykite. Atsakau per 48 valandas.
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-row">
+            <i class="ti ti-mail" aria-hidden="true"></i>
+            <!-- ✏️ Replace with your real email -->
+            <a href="mailto:ana@analima.art" style="color:inherit;text-decoration:none;">ana@analima.art</a>
+          </div>
+          <div class="contact-detail-row">
+            <i class="ti ti-map-pin" aria-hidden="true"></i>
+            <span id="ct-location">Roterdamas, Nyderlandai</span>
+          </div>
+          <div class="contact-detail-row">
+            <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+            <!-- ✏️ Replace with your real Instagram -->
+            <a href="https://instagram.com/ana.lima.art" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">@ana.lima.art</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="contact-form-title" id="ct-form-title">Siųsti žinutę</div>
+        <!--
+          NETLIFY: add name="contact" data-netlify="true" to form, remove e.preventDefault() in handleContactSubmit
+          FORMSPREE: add action="https://formspree.io/f/YOUR_ID" method="POST" to form, remove e.preventDefault()
+        -->
+        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+          <input  class="cf-input"    name="name"    id="cf-name"  type="text"  required style="margin-bottom:12px;" placeholder="Jūsų vardas">
+          <input  class="cf-input"    name="email"   id="cf-email" type="email" required style="margin-bottom:12px;" placeholder="El. pašto adresas">
+          <textarea class="cf-textarea" name="message" id="cf-msg" style="margin-bottom:12px;" placeholder="Jūsų žinutė..."></textarea>
+          <button type="submit" class="cf-send" id="cf-send">Siųsti žinutę</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <a class="footer-name" href="index.html">Ana Lima</a>
+  <span class="footer-copy" id="footer-copy">© 2024 Ana Lima · <span>Visos teisės saugomos</span></span>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+const contactStrings = {
+  lt: {
+    eyebrow:'kontaktai', title:'Susisiekime',
+    body:'Norite užsakyti paveikslą, teirautis dėl prieinamumo ar tiesiog pasisveikinti — rašykite. Atsakau per 48 valandas.',
+    location:'Roterdamas, Nyderlandai', formTitle:'Siųsti žinutę',
+    name:'Jūsų vardas', email:'El. pašto adresas', msg:'Jūsų žinutė...', send:'Siųsti žinutę',
+  },
+  en: {
+    eyebrow:'contact', title:"Let's talk",
+    body:"Whether you'd like to commission a painting, enquire about availability, or simply say hello — write to me. I respond within 48 hours.",
+    location:'Rotterdam, Netherlands', formTitle:'Send a message',
+    name:'Your name', email:'Email address', msg:'Your message...', send:'Send message',
+  },
+};
+
+function onLangChange(l){
+  const st = contactStrings[l];
+  document.getElementById('ct-eyebrow').textContent    = st.eyebrow;
+  document.getElementById('ct-title').textContent      = st.title;
+  document.getElementById('ct-body').textContent       = st.body;
+  document.getElementById('ct-location').textContent   = st.location;
+  document.getElementById('ct-form-title').textContent = st.formTitle;
+  document.getElementById('cf-name').placeholder  = st.name;
+  document.getElementById('cf-email').placeholder = st.email;
+  document.getElementById('cf-msg').placeholder   = st.msg;
+  document.getElementById('cf-send').textContent  = st.send;
+  document.title = l==='lt'
+    ? 'Kontaktai — Ana Lima, tapytoja'
+    : 'Contact — Ana Lima, painter';
+  document.querySelector('meta[name="description"]').content = l==='lt'
+    ? 'Susisiekite su Ana Lima — tapytoja iš Roterdamo. Paveikslų užsakymai, klausimai dėl prieinamumo.'
+    : 'Contact Ana Lima — painter based in Rotterdam. Commission a painting or ask about availability.';
+}
+
+initLang();
+</script>
+</body>
+</html>
