@@ -353,7 +353,7 @@ main { flex: 1; }
   .modal-placeholder { min-height: 200px; }
   .modal-info  { border-left: none; border-top: 0.5px solid var(--border-dark); }
   .modal-enquiry { width: 100%; }
-  .modal-dots-bar { bottom: calc(45vh + 12px); }
+  .modal-dots-bar { bottom: auto; position: relative; transform: none; left: auto; justify-content: center; margin: 10px auto; }
   .about-page  { padding: 32px 20px 48px; }
   .about-title { font-size: 26px; margin-bottom: 28px; }
   .about-grid  { grid-template-columns: 1fr; gap: 32px; }

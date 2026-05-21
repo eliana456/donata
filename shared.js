@@ -230,9 +230,8 @@ function renderGallery(){
 
 let lastTap = {};
 function handleTap(e,i){
-  const now = Date.now();
-  if(lastTap[i] && now-lastTap[i] < 400){ e.preventDefault(); openLb(i); }
-  lastTap[i] = now;
+  e.preventDefault();
+  openLb(i);
 }
 
 function renderToolbar(){
