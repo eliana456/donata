@@ -448,20 +448,13 @@ function openEnquiry(){
 function closeEnquiry(){ document.getElementById('modal-enquiry').classList.remove('open'); }
 
 function handleEnquirySubmit(e){
-  // NETLIFY: add name="enquiry" data-netlify="true" to #eq-form, then remove e.preventDefault()
-  // FORMSPREE: add action="https://formspree.io/f/YOUR_ID" method="POST" to #eq-form, then remove e.preventDefault()
-  const btn=document.getElementById('eq-send');
-  btn.textContent=lang==='lt'?'Išsiųsta ✓':'Sent ✓';
-  btn.style.background='#1D9E75';
-  setTimeout(()=>{ closeEnquiry(); closeLb(); btn.style.background=''; },2200);
+  // fill the hidden subject field with the painting name before Formspree receives it
+  const p = paintings[currentLb];
+  const st = s();
+  document.getElementById('eq-hidden-subject').value = `${st.eqPrefix}: "${p[lang].name}"`;
+  // let the form submit naturally to Formspree — no e.preventDefault()
 }
 
 function handleContactSubmit(e){
-  // NETLIFY: add name="contact" data-netlify="true" to #contact-form, then remove e.preventDefault()
-  // FORMSPREE: add action="https://formspree.io/f/YOUR_ID" method="POST" to #contact-form, then remove e.preventDefault()
-  const btn=document.getElementById('cf-send');
-  const orig=btn.textContent;
-  btn.textContent=lang==='lt'?'Išsiųsta ✓':'Sent ✓';
-  btn.style.background='#1D9E75';
-  setTimeout(()=>{ btn.style.background=''; btn.textContent=orig; document.getElementById('contact-form').reset(); },2500);
+  // nothing special needed here — form submits naturally to Formspree
 }
