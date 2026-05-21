@@ -215,7 +215,7 @@ function renderGallery(){
       ? `<img src="${p.img}" alt="${alt}" loading="lazy">`
       : `<div style="width:100%;height:260px;position:relative;">${placeholderHTML(p,i)}</div>`;
     const sold  = !p.avail ? `<div class="sold-badge">${st.sold}</div>` : '';
-    return `<div class="cell${hidden}" ondblclick="openLb(${i})" ontouchend="handleTap(event,${i})">
+    return `<div class="cell${hidden}" onclick="openLb(${i})">
       <div class="cell-inner">
         <div class="cell-img" style="position:relative;">${img}${sold}</div>
         <div class="cell-overlay"><div class="cell-preview">
@@ -228,11 +228,6 @@ function renderGallery(){
   renderToolbar();
 }
 
-let lastTap = {};
-function handleTap(e,i){
-  e.preventDefault();
-  openLb(i);
-}
 
 function renderToolbar(){
   const st = s();

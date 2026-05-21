@@ -206,10 +206,13 @@ main { flex: 1; }
 .modal-close-btn:hover { color: #fff; }
 
 .modal-dots-bar {
-  position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
-  z-index: 510; display: flex; gap: 6px; align-items: center;
-  background: rgba(14,12,10,0.5); padding: 8px 14px; border-radius: 20px;
+  position: relative;
+  display: flex; gap: 6px; align-items: center; justify-content: center;
+  background: rgba(14,12,10,0.45); padding: 7px 14px; border-radius: 20px;
   backdrop-filter: blur(4px);
+  margin-top: 14px;
+  flex-shrink: 0;
+  z-index: 10;
 }
 .modal-dot { width: 22px; height: 1.5px; background: rgba(255,255,255,0.2); border-radius: 1px; cursor: pointer; transition: background 0.2s; }
 .modal-dot.on   { background: rgba(245,240,232,0.8); }
@@ -235,7 +238,7 @@ main { flex: 1; }
 }
 .modal-stage {
   background: var(--dark-3);
-  display: flex; align-items: center; justify-content: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
   padding: 24px 64px; overflow: hidden;
   align-self: stretch; position: relative;
 }
@@ -353,7 +356,6 @@ main { flex: 1; }
   .modal-placeholder { min-height: 200px; }
   .modal-info  { border-left: none; border-top: 0.5px solid var(--border-dark); }
   .modal-enquiry { width: 100%; }
-  .modal-dots-bar { bottom: auto; position: relative; transform: none; left: auto; justify-content: center; margin: 10px auto; }
   .about-page  { padding: 32px 20px 48px; }
   .about-title { font-size: 26px; margin-bottom: 28px; }
   .about-grid  { grid-template-columns: 1fr; gap: 32px; }
