@@ -187,7 +187,7 @@ main { flex: 1; }
 .fp-footer { padding: 16px 22px; border-top: 0.5px solid var(--border); }
 .fp-clear { font-family: var(--sans); font-size: 11px; color: var(--ink-3); background: none; border: none; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
 .fp-clear:hover { color: var(--ink); }
-.fp-overlay { display: none; position: fixed; inset: 0; z-index: 190; }
+.fp-overlay { display: none; position: fixed; inset: 0; z-index: 190; background: rgba(44,37,32,0.18); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
 .fp-overlay.open { display: block; }
 
 /* ── MODAL LIGHTBOX ── */

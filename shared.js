@@ -319,8 +319,8 @@ function renderFilterPanel(){
     }</div></div>`
   ).join('');
 }
-function openFilterPanel(){ filterOpen=true; document.getElementById('filter-panel').classList.add('open'); document.getElementById('fp-overlay').classList.add('open'); renderFilterPanel(); }
-function closeFilterPanel(){ filterOpen=false; document.getElementById('filter-panel').classList.remove('open'); document.getElementById('fp-overlay').classList.remove('open'); document.getElementById('filter-btn').classList.toggle('active',hasFilters()); }
+function openFilterPanel(){ filterOpen=true; document.getElementById('filter-panel').classList.add('open'); document.getElementById('fp-overlay').classList.add('open'); document.body.style.overflow='hidden'; renderFilterPanel(); }
+function closeFilterPanel(){ filterOpen=false; document.getElementById('filter-panel').classList.remove('open'); document.getElementById('fp-overlay').classList.remove('open'); document.body.style.overflow=''; document.getElementById('filter-btn').classList.toggle('active',hasFilters()); }
 function toggleFilter(k,v){ if(activeFilters[k]===v) delete activeFilters[k]; else activeFilters[k]=v; renderFilterPanel(); renderGallery(); }
 function removeFilter(k){ delete activeFilters[k]; renderFilterPanel(); renderGallery(); }
 function clearFilters(){ activeFilters={}; renderFilterPanel(); renderGallery(); }
