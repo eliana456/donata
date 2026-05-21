@@ -215,7 +215,7 @@ function renderGallery(){
       ? `<img src="${p.img}" alt="${alt}" loading="lazy">`
       : `<div style="width:100%;height:260px;position:relative;">${placeholderHTML(p,i)}</div>`;
     const sold  = !p.avail ? `<div class="sold-badge">${st.sold}</div>` : '';
-    return `<div class="cell${hidden}" onclick="openLb(${i})">
+    return `<div class="cell${hidden}" data-idx="${i}" onclick="cellTap(event,${i})">
       <div class="cell-inner">
         <div class="cell-img" style="position:relative;">${img}${sold}</div>
         <div class="cell-overlay"><div class="cell-preview">
@@ -227,6 +227,56 @@ function renderGallery(){
   }).join('');
   renderToolbar();
 }
+
+
+// ════════════════════════════════════════
+//  TWO-TAP / CLICK SYSTEM
+//  Desktop: single click opens lightbox directly
+//  Mobile:  first tap shows overlay preview, second tap opens lightbox
+// ════════════════════════════════════════
+const cellState = {}; // tracks which cell is in "preview shown" state on mobile
+
+function cellTap(e, i) {
+  // detect touch device
+  const isTouch = window.matchMedia('(hover: none)').matches;
+
+  if (!isTouch) {
+    // desktop: single click opens immediately
+    openLb(i);
+    return;
+  }
+
+  // mobile two-tap logic
+  if (cellState[i] === 'preview') {
+    // second tap — open lightbox
+    openLb(i);
+    cellState[i] = null;
+  } else {
+    // first tap — show preview, hide all others first
+    Object.keys(cellState).forEach(k => {
+      if (k != i) {
+        cellState[k] = null;
+        const otherCell = document.querySelector(`.cell[data-idx="${k}"]`);
+        if (otherCell) otherCell.classList.remove('touch-active');
+      }
+    });
+    cellState[i] = 'preview';
+    // find this cell and add touch-active class to show overlay
+    const cell = document.querySelector(`.cell[data-idx="${i}"]`);
+    if (cell) cell.classList.add('touch-active');
+  }
+}
+
+// dismiss preview if user taps outside any cell
+document.addEventListener('click', e => {
+  if (!e.target.closest('.cell')) {
+    Object.keys(cellState).forEach(k => {
+      cellState[k] = null;
+      const cell = document.querySelector(`.cell[data-idx="${k}"]`);
+      if (cell) cell.classList.remove('touch-active');
+    });
+  }
+});
 
 
 function renderToolbar(){

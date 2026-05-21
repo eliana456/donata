@@ -157,6 +157,10 @@ main { flex: 1; }
 .cell-pprice{ font-family: var(--sans); font-size: 11px; color: rgba(245,240,232,0.85); }
 .cell-phint { font-family: var(--sans); font-size: 10px; color: rgba(245,240,232,0.3); margin-top: 4px; }
 @media (hover: none) { .cell-phint { display: none; } }
+
+.cell.touch-active .cell-overlay { background: rgba(28,22,18,0.6); }
+.cell.touch-active .cell-preview { opacity: 1; transform: translateY(0); }
+.cell.touch-active .cell-phint::after { content: ' — tap again to open'; }
 .no-results { padding: 40px; font-family: var(--sans); font-size: 13px; color: var(--ink-3); font-style: italic; display: none; }
 
 /* ── FILTER PANEL ── */
