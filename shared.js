@@ -51,7 +51,7 @@ const paintings = [
 const strings = {
   lt: {
     navWorks:'Darbai', navAbout:'Apie', navContact:'Kontaktai',
-    eyebrow:'tapytoja · Vilnius', heroTitle:'Atrinkti darbai, 2022–2024',
+    eyebrow:'tapytoja · Vilnius', heroTitle:'Atrinkti darbai, 2022–2026',
     filterLabel:'filtrai', fpTitle:'Filtruoti darbus', fpClear:'išvalyti filtrus',
     groups:[
       {key:'medium', label:'technika',     opts:[{k:'oil',l:'aliejus'},{k:'acrylic',l:'akrilas'},{k:'watercolour',l:'akvarelė'}]},
@@ -73,7 +73,7 @@ const strings = {
   },
   en: {
     navWorks:'Works', navAbout:'About', navContact:'Contact',
-    eyebrow:'painter · Vilnius', heroTitle:'Selected works, 2022–2024',
+    eyebrow:'painter · Vilnius', heroTitle:'Selected works, 2022–2026',
     filterLabel:'filter', fpTitle:'Filter works', fpClear:'clear all filters',
     groups:[
       {key:'medium', label:'medium',       opts:[{k:'oil',l:'oil'},{k:'acrylic',l:'acrylic'},{k:'watercolour',l:'watercolour'}]},
