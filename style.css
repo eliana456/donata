@@ -353,10 +353,22 @@ main { flex: 1; }
   .toolbar { padding: 12px 20px 10px; }
   .gallery { column-count: 2; column-gap: 3px; padding: 0 16px 32px; }
   .cell   { margin-bottom: 3px; }
-  .modal-body { grid-template-columns: 1fr; grid-template-rows: 60vh 1fr; }
-  .modal-stage { height: 60vh; min-height: 60vh; max-height: 60vh; padding: 12px; }
+  .modal-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60vh auto;
+  }
+  .modal-stage {
+    padding: 12px 48px 8px;
+    height: 60vh;
+    min-height: 60vh;
+    max-height: 60vh;
+    overflow: hidden;
+  }
+  .modal-info {
+    height: 40vh;
+    overflow-y: auto;
+  }
   .modal-placeholder { min-height: 200px; }
-  .modal-info  { border-left: none; border-top: 0.5px solid var(--border-dark); }
   .modal-enquiry { width: 100%; }
   .about-page  { padding: 32px 20px 48px; }
   .about-title { font-size: 26px; margin-bottom: 28px; }
