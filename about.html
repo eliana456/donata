@@ -88,7 +88,7 @@
     <h1 class="about-title" id="about-title">Apie menininkę</h1>
     <div class="about-grid">
       <div class="about-portrait">
-        <!-- ✏️ Replace with: <img src="images/portrait.jpg" alt="Donata Andriuškevičienė, painter"> -->
+        <img src="images/portrait.jpeg" alt="Donata Andriuškevičienė, painter"> 
         <div class="about-portrait-placeholder"></div>
       </div>
       <div class="about-text">
@@ -109,7 +109,7 @@
           </div>
           <div class="about-detail-row">
             <span class="about-detail-label" id="abl-med"></span>
-            <span class="about-detail-val" id="abv-med">Aliejus, akrilas, akvarelė</span>
+            <span class="about-detail-val" id="abv-med">Aliejus, akrilas, anglis, akvarelė</span>
           </div>
         </div>
       </div>
@@ -127,13 +127,13 @@
 const aboutStrings = {
   lt: {
     eyebrow:'tapytoja · Vilnius', title:'Apie menininkę',
-    bio:`<p>Donata Andriuškevičienė yra tapytoja, gyvenanti ir dirbanti Vilniuje. Jos darbai atskleidžia ryškų spalvų pasaulį – ekspresyvius peizažus, abstrakcijas ir natiurmortus, kuriuose aliejus ir akrilas gula intuityviais gestais.</p><p>Baigė studijas VU Komunikacijos fakultete. Jos paveikslai eksponuoti galerijose Lietuvoje.</p><p>Priima užsakymus. Paveikslai pristatomi tarptautiniu mastu.</p>`,
+    bio:`<p>Donata Andriuškevičienė yra tapytoja, gyvenanti ir dirbanti Vilniuje. Jos darbai atskleidžia ryškų spalvų pasaulį – ekspresyvius peizažus, abstrakcijas, figūratyvus ir natiurmortus, kuriuose aliejus ir akrilas gula intuityviais gestais.</p><p>Baigė studijas VU Komunikacijos fakultete. Jos paveikslai eksponuoti galerijose Lietuvoje ir Italijoje.</p><p>Kūriniai siunčiami į bet kurį pasaulio kampelį.</p>`,
     born:'Gimė', based:'Gyvena', basedVal:'Vilnius, Lietuva',
     edu:'Išsilavinimas', med:'Technikos', medVal:'Aliejus, akrilas, anglis, akvarelė',
   },
   en: {
     eyebrow:'painter · Vilnius', title:'About the artist',
-    bio:`<p>Donata Andriuškevičienė is a painter living and working in Vilnius. Her work explores a world of bold colour — expressive landscapes, abtractions and still lifes where oil and acrylic merge with intuitive mark-making.</p><p>She graduated from the Faculty of Communication at Vilnius University. Her paintings have been exhibited in galleries in Lithuania.</p><p>Commissions are welcome. Works ship internationally.</p>`,
+    bio:`<p>Donata Andriuškevičienė is a painter living and working in Vilnius. Her work explores a world of bold colour — expressive landscapes, abtractions, figuratives and still lifes where oil and acrylic merge with intuitive mark-making.</p><p>She graduated from the Faculty of Communication at Vilnius University. Her paintings have been exhibited in galleries in Lithuania and Italy.</p><p>Works ship to any corner of the world.</p>`,
     born:'Born', based:'Based', basedVal:'Vilnius, Lithuania',
     edu:'Education', med:'Media', medVal:'Oil, acrylic, charcoal, watercolour',
   },
@@ -155,7 +155,7 @@ function onLangChange(l){
     : 'About — Donata Andriuškevičienė, painter in Vilnius';
   document.querySelector('meta[name="description"]').content = l==='lt'
     ? 'Donata Andriuškevičienė — tapytoja, gyvenanti Vilniuje. Baigė studijas VU Komunikacijos fakultete'
-    : 'Donata Andriuškevičienė — painter based in Vilnius. Studied at Vilnius Univeristy. Commissions welcome.';
+    : 'Donata Andriuškevičienė — painter based in Vilnius. Studied at Vilnius Univeristy.';
 }
 
 initLang();
