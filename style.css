@@ -369,9 +369,20 @@ main { flex: 1; }
     height: 40vh;
     overflow-y: auto;
     padding: 16px;
+    display: block;
   }
-  .modal-actions { margin-top: 16px; }
-  .modal-info-inner { overflow-y: visible; }
+  .modal-info-inner {
+    display: block;
+    overflow-y: visible;
+    padding-bottom: 80px;
+  }
+  .modal-actions {
+    position: sticky;
+    bottom: 0;
+    background: var(--dark);
+    padding: 10px 0 4px;
+    margin-top: 12px;
+  }
   .modal-placeholder { min-height: 200px; }
   .modal-info  { border-left: none; border-top: 0.5px solid var(--border-dark); }
   .modal-enquiry { width: 100%; }
