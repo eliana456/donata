@@ -57,7 +57,7 @@ const paintings = [
     medium:'acrylic', series:'still-life', size:'medium', avail:true,
     lt:{name:'Ne, viskas ok',     med:'Akrilas ant drobės'},
     en:{name:"No, everything's fine",       med:'Acrylic on canvas'},
-    dim:'55 × 70 cm', year:'2026', price:'€ 300' },
+    dim:'55 × 70 cm', year:'2026', price:'€ 500' },
   { bg:'#FAC775', a1:'#EF9F27', a2:'#BA7517', img:'images/svelnumoanatomija.jpeg',
     medium:'acrylic', series:'studies',    size:'small', avail:true,
     lt:{name:'Švelnumo anatomija', med:'Akrilas ant popieriaus'},
