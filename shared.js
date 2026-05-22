@@ -84,7 +84,7 @@ const strings = {
     eyebrow:'tapytoja · Vilnius', heroTitle:'Atrinkti darbai, 2022–2026',
     filterLabel:'filtrai', fpTitle:'Filtruoti darbus', fpClear:'išvalyti filtrus',
     groups:[
-      {key:'medium', label:'technika',     opts:[{k:'oil',l:'aliejus'},{k:'acrylic',l:'akrilas'},{k:'watercolour',l:'akvarelė'}]},
+      {key:'medium', label:'technika',     opts:[{k:'charcoal',l:'anglis'}, {k:'oil',l:'aliejus'},{k:'acrylic',l:'akrilas'},{k:'watercolour',l:'akvarelė'}]},
       {key:'series',  label:'serija',       opts:[{k:'landscapes',l:'peizažai'},{k:'figures',l:'figūros'},{k:'still-life',l:'natiurmortas'},{k:'studies',l:'etiudai'}]},
       {key:'size',    label:'dydis',        opts:[{k:'small',l:'mažas'},{k:'medium',l:'vidutinis'},{k:'large',l:'didelis'}]},
       {key:'avail',   label:'prieinamumas', opts:[{k:'true',l:'prieinama'},{k:'false',l:'parduota'}]},
