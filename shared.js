@@ -3,6 +3,16 @@
 //  Set `img` to your image path e.g. "images/vakaras.jpg"
 // ════════════════════════════════════════
 const paintings = [
+  { bg:'#1D9E75', a1:'#085041', a2:'#5DCAA5', img:'images/surelyyouknow.jpeg',
+    medium:'acrylic', series:'still-life', size:'small', avail:true,
+    lt:{name:'Passage',     med:'Akrilas ant drobės'},
+    en:{name:'Passage',     med:'Acrylic on canvas'},
+    dim:'60 × 60 cm', year:'2026', price:'€ 250' },
+  { bg:'#D85A30', a1:'#F0997B', a2:'#712B13', img:'images/passage.jpeg',
+    medium:'oil', series:'figures',    size:'small', avail:true,
+    lt:{name:'Passage',  med:'Aliejus ant drobės'},
+    en:{name:'Passage', med:'Oil on canvas'},
+    dim:'60 × 60 cm', year:'2026', price:'€ 250' },
   { bg:'#7F77DD', a1:'#D85A30', a2:'#FAC775', img:'images/youandi.jpeg',
     medium:'acrylic', series:'landscapes', size:'small', avail:true,
     lt:{name:'Aš ir Tu',      med:'Akrilas ant drobės'},
