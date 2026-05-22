@@ -353,8 +353,6 @@ main { flex: 1; }
   .toolbar { padding: 12px 20px 10px; }
   .gallery { column-count: 2; column-gap: 3px; padding: 0 16px 32px; }
   .cell   { margin-bottom: 3px; }
-  .cell-preview { opacity: 1 !important; transform: translateY(0) !important; }
-  .cell-overlay { background: rgba(28,22,18,0.5) !important; }
   .modal-body  { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
   .modal-stage { padding: 16px; min-height: 240px; max-height: 55vw; }
   .modal-placeholder { min-height: 200px; }
