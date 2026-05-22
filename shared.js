@@ -413,9 +413,10 @@ function renderLb(){
     paint.innerHTML=placeholderHTML(p,currentLb);
   }
   const visDots=paintings.map((_,i)=>i).filter(i=>matchesFilter(paintings[i]));
-  document.getElementById('modal-dots').innerHTML=visDots.map(i=>
-    `<div class="modal-dot${i===currentLb?' on':''}" onclick="openLb(${i})"></div>`
-  ).join('');
+  const currentPos = visDots.indexOf(currentLb) + 1;
+  const totalVis = visDots.length;
+  document.getElementById('modal-dots').innerHTML=
+    `<span class="modal-counter">${currentPos} / ${totalVis}</span>`;
 }
 
 // keyboard nav
