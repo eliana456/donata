@@ -3,6 +3,16 @@
 //  Set `img` to your image path e.g. "images/vakaras.jpg"
 // ════════════════════════════════════════
 const paintings = [
+  { bg:'#7F77DD', a1:'#D85A30', a2:'#FAC775', img:'images/vasarosgylis.jpeg',
+    medium:'acrylic', series:'landscapes', size:'small', avail:true,
+    lt:{name:'Vasaros gylis',      med:'Akrilas ant drobės'},
+    en:{name:'Vasaros gylis',     med:'Acrylic on canvas'},
+    dim:'60 × 60 cm', year:'2026', price:'€ 200' },
+  { bg:'#7F77DD', a1:'#D85A30', a2:'#FAC775', img:'images/pavasarisparasepirmas.jpeg',
+    medium:'acrylic', series:'landscapes', size:'small', avail:true,
+    lt:{name:'Pavasaris parašė pirmas',      med:'Akrilas ant drobės'},
+    en:{name:'Pavasaris parašė pirmas',     med:'Acrylic on canvas'},
+    dim:'60 × 60 cm', year:'2026', price:'€ 200' },
   { bg:'#1D9E75', a1:'#085041', a2:'#5DCAA5', img:'images/laimeskryptis.jpeg',
     medium:'acrylic', series:'landscapes', size:'small', avail:true,
     lt:{name:'Laimės kryptis',      med:'Akrilas ant drobės'},
