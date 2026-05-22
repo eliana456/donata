@@ -3,10 +3,20 @@
 //  Set `img` to your image path e.g. "images/vakaras.jpg"
 // ════════════════════════════════════════
 const paintings = [
+  { bg:'#1D9E75', a1:'#085041', a2:'#5DCAA5', img:'images/laimeskryptis.jpeg',
+    medium:'acrylic', series:'landscapes', size:'small', avail:true,
+    lt:{name:'Laimės kryptis',      med:'Akrilas ant drobės'},
+    en:{name:'Laimės kryptis',     med:'Acrylic on canvas'},
+    dim:'60 × 60 cm', year:'2026', price:'€ 200' },
+  { bg:'#7F77DD', a1:'#D85A30', a2:'#FAC775', img:'images/smaragdodovana.jpeg',
+    medium:'acrylic', series:'landscapes', size:'small', avail:true,
+    lt:{name:'Smaragdo dovana',      med:'Akrilas ant drobės'},
+    en:{name:' Smaragdo dovana',     med:'Acrylic on canvas'},
+    dim:'60 × 60 cm', year:'2026', price:'€ 200' },
   { bg:'#1D9E75', a1:'#085041', a2:'#5DCAA5', img:'images/surelyyouknow.jpeg',
     medium:'acrylic', series:'still-life', size:'small', avail:true,
-    lt:{name:'Passage',     med:'Akrilas ant drobės'},
-    en:{name:'Passage',     med:'Acrylic on canvas'},
+    lt:{name:'Surely you know',     med:'Akrilas ant drobės'},
+    en:{name:'Surely you know',     med:'Acrylic on canvas'},
     dim:'60 × 60 cm', year:'2026', price:'€ 250' },
   { bg:'#D85A30', a1:'#F0997B', a2:'#712B13', img:'images/passage.jpeg',
     medium:'oil', series:'figures',    size:'small', avail:true,
