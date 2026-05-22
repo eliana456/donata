@@ -52,7 +52,7 @@ const paintings = [
     medium:'oil', series:'figures',    size:'large', avail:true,
     lt:{name:'Fotosesija',  med:'Aliejus ant drobės'},
     en:{name:'Photo shoot', med:'Oil on canvas'},
-    dim:'100 × 80 cm', year:'2026', price:'€ 300' },
+    dim:'100 × 80 cm', year:'2026', price:' ' },
   { bg:'#1D9E75', a1:'#085041', a2:'#5DCAA5', img:'images/neviskasok.jpeg',
     medium:'acrylic', series:'still-life', size:'medium', avail:true,
     lt:{name:'Ne, viskas ok',     med:'Akrilas ant drobės'},
