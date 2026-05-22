@@ -88,7 +88,7 @@ const strings = {
       {key:'series',  label:'serija',       opts:[{k:'landscapes',l:'peizažai'},{k:'figures',l:'figūros'},{k:'still-life',l:'natiurmortas'},{k:'studies',l:'etiudai'}]},
       {key:'size',    label:'dydis',        opts:[{k:'small',l:'mažas'},{k:'medium',l:'vidutinis'},{k:'large',l:'didelis'}]},
       {key:'avail',   label:'prieinamumas', opts:[{k:'true',l:'prieinama'},{k:'false',l:'parduota'}]},
-      {key:'year',    label:'metai',        opts:[{k:'2024',l:'2024'},{k:'2023',l:'2023'},{k:'2022',l:'2022'}]},
+      {key:'year',    label:'metai',        opts:[{k:'2026',l:'2026'}, {k:'2025',l:'2025'}, {k:'2024',l:'2024'},{k:'2023',l:'2023'},{k:'2022',l:'2022'}]},
     ],
     lMed:'technika', lDim:'matmenys', lSize:'dydis', lYear:'metai',
     avail:'Prieinama', sold:'Parduota',
