@@ -353,8 +353,8 @@ main { flex: 1; }
   .toolbar { padding: 12px 20px 10px; }
   .gallery { column-count: 2; column-gap: 3px; padding: 0 16px 32px; }
   .cell   { margin-bottom: 3px; }
-  .modal-body  { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
-  .modal-stage { padding: 16px; min-height: 240px; max-height: 55vw; }
+  .modal-body { grid-template-columns: 1fr; grid-template-rows: 60vh 1fr; }
+  .modal-stage { height: 60vh; min-height: 60vh; max-height: 60vh; padding: 12px; }
   .modal-placeholder { min-height: 200px; }
   .modal-info  { border-left: none; border-top: 0.5px solid var(--border-dark); }
   .modal-enquiry { width: 100%; }
