@@ -3,6 +3,11 @@
 //  Set `img` to your image path e.g. "images/vakaras.jpg"
 // ════════════════════════════════════════
 const paintings = [
+  { bg:'#D85A30', a1:'#F0997B', a2:'#712B13', img:'images/thecityinsideme.jpeg',
+    medium:'oil', series:'figures',    size:'big', avail:true,
+    lt:{name:'Miestas manyje',  med:'Aliejus ant drobės'},
+    en:{name:'The city inside me', med:'Oil on canvas'},
+    dim:'80 × 100 cm', year:'2026', price:'€ 600' },
   { bg:'#D85A30', a1:'#F0997B', a2:'#712B13', img:'images/nezinomas.jpeg',
     medium:'acrylic', series:'figures',    size:'medium', avail:true,
     lt:{name:'Vasara II',  med:'Akrilas ant drobės'},
