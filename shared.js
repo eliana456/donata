@@ -70,7 +70,7 @@ const paintings = [
     dim:'60 × 60 cm', year:'2026', price:'€ 200' },
   { bg:'#7F77DD', a1:'#D85A30', a2:'#FAC775', img:'images/islikimas.jpeg',
     medium:'acrylic', series:'landscapes', size:'large', avail:true,
-    lt:{name:'Išlikimas',     med:'Acrylic ant drobės'},
+    lt:{name:'Išlikimas',     med:'Akrilas ant drobės'},
     en:{name:'Survival',  med:'Acrylic on canvas'},
     dim:'80 × 100 cm', year:'2024', price:'€ 300' },
   { bg:'#D85A30', a1:'#F0997B', a2:'#712B13', img:'images/fotosesija.jpeg',
@@ -117,7 +117,7 @@ const strings = {
     cfName:'Jūsų vardas', cfEmail:'El. pašto adresas', cfMsg:'Jūsų žinutė...', cfSend:'Siųsti žinutę',
     noResults:'Nėra atitinkančių darbų.',
     footer:'© 2026 Donata Andriuškevičienė', footerRights:'Visos teisės saugomos',
-    dblHint:'dukart spustelėkite norėdami sužinoti daugiau',
+    
     worksLabel:(n)=>`${n} darb${n===1?'as':n<10?'ai':'ų'}`,
     sizeMap:{small:'Mažas',medium:'Vidutinis',large:'Didelis'},
   },
@@ -139,7 +139,7 @@ const strings = {
     cfName:'Your name', cfEmail:'Email address', cfMsg:'Your message...', cfSend:'Send message',
     noResults:'No works match this filter.',
     footer:'© 2026 Donata Andriuškevičienė', footerRights:'All rights reserved',
-    dblHint:'double-click to open',
+    
     worksLabel:(n)=>`${n} work${n!==1?'s':''}`,
     sizeMap:{small:'Small',medium:'Medium',large:'Large'},
   },
@@ -271,7 +271,7 @@ function renderGallery(){
         <div class="cell-overlay"><div class="cell-preview">
           <div class="cell-pname">${p[lang].name}</div>
           <div class="cell-pmeta"><span class="cell-pmed">${p[lang].med}</span><span class="cell-pprice">${p.price}</span></div>
-          <div class="cell-phint">${st.dblHint}</div>
+          
         </div></div>
       </div></div>`;
   }).join('');
